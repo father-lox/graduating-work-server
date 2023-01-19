@@ -2,11 +2,19 @@
 <html>
 
 <head>
-    <title>News </title>
+    <title>News</title>
     <link rel="stylesheet" href="./style.css">
+
+    @vite(['resources/css/index.css'])
 </head>
 
 <body>
+    <header class="header">
+        <nav class="navigation">
+            <a href="{{ route('login') }}" class="button navigation__login">login</a>
+            <a href="{{ route('registration') }}" class="button navigation__signup">sign up</a>
+        </nav>
+    </header>    
     <main class="index">
         <section class="news-section">
             <div class="news">
@@ -48,9 +56,6 @@
                             </svg> 240</li>
                     </ul><button class="button">Комментировать</button>
                 </div>
-                <div class="news__publisher-page-links"><a class="publisher-page-link" href="#" title=""></a><a
-                        class="publisher-page-link" href="#" title=""></a><a class="publisher-page-link" href="#"
-                        title=""></a><a class="publisher-page-link" href="#" title=""></a></div>
             </div>
         </section>
     </main>

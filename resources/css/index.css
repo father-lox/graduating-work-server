@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import './normalize.css';
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -268,8 +267,6 @@ body {
 }
 
 .news {
-  position: relative;
-  padding: 0 45rem 0 0;
   max-width: 600rem;
 }
 @media screen and (min-width: 1280px) {
@@ -364,6 +361,13 @@ body {
     width: 11.25vw;
     height: 2.03125vw;
   }
+}
+
+.header {
+  max-width: 600rem;
+  display: flex;
+  justify-content: flex-end;
+  margin: 25rem auto 0;
 }
 
 .index {

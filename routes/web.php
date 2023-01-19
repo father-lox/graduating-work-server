@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserRegistrationController;
+use App\Http\Controllers\UserPublicationsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +19,8 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::middleware("auth")->group(function () {
-    Route::get('/messages', [MessagesController::class, 'index'])->name('messages');
-    Route::post('/send-message', [MessagesController::class, 'sendMessage'])->name('send-message');
-
+    Route::get('/publications', [UserPublicationsController::class, 'index'])->name('publications');
+    // Route::post('/send-message', [MessagesController::class, 'sendMessage'])->name('send-message');
     Route::get('/logout', [UserLoginController::class, 'logout'])->name('logout');
 });
 

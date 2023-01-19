@@ -1,0 +1,254 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Regular.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Regular.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Medium.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Medium.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Bold.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Bold.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Serif";
+  src: url("../../fonts/Noto_Serif/NotoSerif-Regular.ttf") format("opentype"), url("../../fonts/Noto_Serif/NotoSerif-Regular.woff") format("woff"), url("../../fonts/Noto_Serif/NotoSerif-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Noto-Serif";
+  src: url("../../fonts/Noto_Serif/NotoSerif-Medium.ttf") format("opentype"), url("../../fonts/Noto_Serif/NotoSerif-Medium.woff") format("woff"), url("../../fonts/Noto_Serif/NotoSerif-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Roboto-Slab";
+  src: url("../../fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format("opentype"), url("../../fonts/Roboto_Slab/RobotoSlab-Regular.woff") format("woff"), url("../../fonts/Roboto_Slab/RobotoSlab-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+/* --------------------- */
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background-color: #f00;
+}
+
+html {
+  font-size: 1px;
+}
+
+body {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 10rem;
+  line-height: 136%;
+  caret-color: #f00;
+}
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 0.78125vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .display-more-767 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .display-less-768 {
+    display: none;
+  }
+}
+
+.news-statistics {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 16rem;
+  line-height: 136%;
+  font-weight: 500;
+  display: flex;
+  color: #3d3d3d;
+}
+@media screen and (min-width: 1280px) {
+  .news-statistics {
+    font-size: 1.25vw;
+  }
+}
+.news-statistics__item {
+  display: flex;
+  align-items: center;
+}
+.news-statistics__item:not(:last-child) {
+  margin: 0 17rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .news-statistics__item:not(:last-child) {
+    margin: 0 1.328125vw 0 0;
+  }
+}
+.news-statistics__preview-icon {
+  width: 24px;
+  stroke: #3d3d3d;
+  margin: 0 10rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .news-statistics__preview-icon {
+    width: 1.875vw;
+    margin: 0 0.78125vw 0 0;
+  }
+}
+
+.admin-page-title {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 36rem;
+  line-height: 136%;
+  font-weight: 500;
+  color: #3d3d3d;
+}
+@media screen and (min-width: 1280px) {
+  .admin-page-title {
+    font-size: 2.8125vw;
+  }
+}
+
+.published-news-list {
+  display: grid;
+  gap: 50rem;
+  max-width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .published-news-list {
+    grid-template-columns: calc(50% - 25rem) calc(50% - 25rem);
+  }
+}
+@media screen and (max-width: 575px) {
+  .published-news-list {
+    grid-template-columns: 100%;
+  }
+}
+.published-news-list__title, .published-news-list__comment {
+  overflow: hidden;
+}
+.published-news-list__title {
+  margin: 0 0 3rem;
+  font-family: "Noto-Serif", sans-serif;
+  font-size: 20rem;
+  line-height: 136%;
+  font-weight: 500;
+  max-height: 30rem;
+  color: #3d3d3d;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 1280px) {
+  .published-news-list__title {
+    font-size: 1.5625vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .published-news-list__title {
+    font-size: 10rem;
+  }
+}
+.published-news-list__comment {
+  margin: 0 0 13rem;
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 16rem;
+  line-height: 136%;
+  max-height: 40rem;
+  color: #000;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+@media screen and (min-width: 1280px) {
+  .published-news-list__comment {
+    font-size: 1.25vw;
+  }
+}
+
+.author-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 860rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 0 20rem 100rem;
+}
+.author-news .admin-page-title {
+  margin: 60rem 0;
+}
+
+.published-news {
+  max-width: 100%;
+}

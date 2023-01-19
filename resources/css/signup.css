@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import './normalize.css';
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -427,11 +426,11 @@ body {
 .singup .default-input:not(:first-child) {
   margin: 10rem 0 0;
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .singup .default-input:not(:first-child) {
     display: none;
   }
-}
+} */
 .singup__info {
   font-size: 14rem;
   color: #9B9B9B;
@@ -454,7 +453,7 @@ body {
 }
 @media screen and (max-width: 1279px) {
   .singup__illustration {
-    max-width: 56%;
+    max-width: 46%;
   }
 }
 @media screen and (max-width: 767px) {

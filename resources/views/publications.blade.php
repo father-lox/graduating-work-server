@@ -2,30 +2,22 @@
 <html>
 
 <head>
-    <title>News</title>
-    @vite(['resources/css/index.css'])
+    <title>Your News</title>
+    @vite(['resources/css/publications.css'])
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navigation">
-            <a href="{{ route('login') }}" class="button navigation__login">login</a>
-            <a href="{{ route('registration') }}" class="button navigation__signup">sign up</a>
-        </nav>
-    </header>    
-    <main class="index">
-        <section class="news-section">
-            <div class="news">
-                <h1 class="news__title">У FTX проблемы с выводом средств на фоне конфликта с Binance. Объясняем, что
-                    происходит</h1>
-                <div class="news__author-comment-section">
-                    <div class="comment">
-                        <p class="comment__nickname comment__nickname_writer">Comment by @Войтенко</p>
-                        <p class="comment__text comment__text_writer">С самого утра 7 ноября клиенты централизованной
-                            криптовалютной биржи FTX наблюдают проблемы со стабильностью работы биржи.</p>
-                    </div>
-                </div>
-                <div class="news__controllers">
+    <main class="author-news">
+        <section class="published-news">
+            <h1 class="admin-page-title">List your news</h1>
+            <ul class="published-news-list">
+                <li class="published-news-list__item">
+                    <h2 class="published-news-list__title">Nisi, quam nisl est sed nulla sed. Ut sagittis consequat
+                        ultricies odio nisi, morbi placerat.</h2>
+                    <p class="published-news-list__comment">Laoreet magna morbi pulvinar ullamcorper nec felis, pretium
+                        id. Potenti lacus felis tellus sit. In proin aliquam nisl mi feugiat sit. Nulla interdum in ut
+                        in. Enim tellus sit tincidunt ornare erat vitae egestas. Feugiat quis in mus viverra libero
+                        facilisis dignissim malesuada. Viverra at et at faucibus tempor in nibh.</p>
                     <ul class="news-statistics">
                         <li class="news-statistics__item"><svg class="news-statistics__preview-icon" viewBox="0 0 24 24"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,9 +44,9 @@
                                         stroke-linejoin="round" />
                                 </g>
                             </svg> 240</li>
-                    </ul><button class="button">Комментировать</button>
-                </div>
-            </div>
+                    </ul>
+                </li>
+            </ul>
         </section>
     </main>
     <script src="./script.js"> </script>

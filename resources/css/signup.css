@@ -1,0 +1,464 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import './normalize.css';
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Regular.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Regular.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Medium.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Medium.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Bold.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Bold.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Serif";
+  src: url("../../fonts/Noto_Serif/NotoSerif-Regular.ttf") format("opentype"), url("../../fonts/Noto_Serif/NotoSerif-Regular.woff") format("woff"), url("../../fonts/Noto_Serif/NotoSerif-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Noto-Serif";
+  src: url("../../fonts/Noto_Serif/NotoSerif-Medium.ttf") format("opentype"), url("../../fonts/Noto_Serif/NotoSerif-Medium.woff") format("woff"), url("../../fonts/Noto_Serif/NotoSerif-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Roboto-Slab";
+  src: url("../../fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format("opentype"), url("../../fonts/Roboto_Slab/RobotoSlab-Regular.woff") format("woff"), url("../../fonts/Roboto_Slab/RobotoSlab-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+/* --------------------- */
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background-color: #f00;
+}
+
+html {
+  font-size: 1px;
+}
+
+body {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 10rem;
+  line-height: 136%;
+  caret-color: #f00;
+}
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 0.78125vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .display-more-767 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .display-less-768 {
+    display: none;
+  }
+}
+
+.note-error {
+  display: flex;
+  align-items: center;
+}
+.note-error__image {
+  max-width: 24rem;
+  stroke: #f00;
+}
+@media screen and (min-width: 1280px) {
+  .note-error__image {
+    max-width: 1.875vw;
+  }
+}
+.note-error__text {
+  color: #f00;
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 12rem;
+  line-height: 136%;
+  margin: 0 0 0 6rem;
+}
+@media screen and (min-width: 1280px) {
+  .note-error__text {
+    font-size: 0.9375vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .note-error__text {
+    margin: 0 0 0 0.46875vw;
+  }
+}
+
+.default-input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-left: 3rem solid #f00;
+  padding: 12rem 0 12rem 15rem;
+}
+@media screen and (min-width: 1280px) {
+  .default-input {
+    border-width: 0.234375vw;
+    padding: 0.9375vw 0 0.9375vw 1.171875vw;
+  }
+}
+.default-input.default-input_error .note-error {
+  display: flex;
+}
+.default-input.default-input_error .default-input__hint {
+  display: none;
+}
+.default-input__info {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 10rem;
+}
+@media screen and (min-width: 1280px) {
+  .default-input__info {
+    margin: 0 0 0.78125vw;
+  }
+}
+.default-input__icon-and-name {
+  position: absolute;
+  top: 50%;
+  left: 15rem;
+  display: flex;
+  order: -1;
+  pointer-events: none;
+  transform: translateY(-50%);
+  margin: 0 0 8rem;
+}
+@media screen and (min-width: 1280px) {
+  .default-input__icon-and-name {
+    margin: 0 0 0.625vw;
+  }
+}
+.default-input__icon {
+  width: 18rem;
+  margin: 0 8rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .default-input__icon {
+    width: 1.40625vw;
+    margin: 0 0.625vw 0 0;
+  }
+}
+.default-input__name {
+  display: block;
+  text-transform: lowercase;
+  color: #f00;
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 14rem;
+  line-height: 136%;
+}
+@media screen and (min-width: 1280px) {
+  .default-input__name {
+    font-size: 1.09375vw;
+  }
+}
+.default-input__input {
+  border: none;
+  padding: 0;
+  height: 20rem;
+  font-size: 13rem;
+}
+@media screen and (min-width: 1280px) {
+  .default-input__input {
+    font-size: 1.015625vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .default-input__input {
+    height: 1.5625vw;
+  }
+}
+.default-input__input:hover {
+  cursor: pointer;
+}
+.default-input__input:focus-visible, .default-input__input__input:focus {
+  outline: none;
+}
+.default-input__input:focus + .default-input__icon-and-name, .default-input__input:focus-visible + .default-input__icon-and-name, .default-input__input:not(:placeholder-shown) + .default-input__icon-and-name {
+  position: static;
+  pointer-events: none;
+  transform: none;
+}
+.default-input__input:focus ~ .default-input__hint-and-error, .default-input__input:focus-visible ~ .default-input__hint-and-error, .default-input__input:not(:placeholder-shown) ~ .default-input__hint-and-error {
+  display: block;
+}
+.default-input__hint-and-error {
+  display: none;
+}
+.default-input__hint, .default-input .note-error {
+  margin: 10rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .default-input__hint, .default-input .note-error {
+    margin: 0.78125vw 0 0;
+  }
+}
+.default-input__hint {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 12rem;
+  line-height: 136%;
+  color: #9B9B9B;
+  text-transform: lowercase;
+}
+@media screen and (min-width: 1280px) {
+  .default-input__hint {
+    font-size: 0.9375vw;
+  }
+}
+.default-input .note-error {
+  display: none;
+}
+
+.default-input.default-input_rich {
+  padding: 25rem 20rem 25rem 23rem;
+  border-width: 5rem;
+}
+.default-input.default-input_rich .default-input__input {
+  color: #3d3d3d;
+  height: 22rem;
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 16rem;
+  line-height: 100%;
+  font-weight: 700;
+}
+@media screen and (min-width: 1280px) {
+  .default-input.default-input_rich .default-input__input {
+    font-size: 1.25vw;
+  }
+}
+.default-input.default-input_rich .default-input__input:focus ~ .default-input__hint-and-error, .default-input.default-input_rich .default-input__input:focus-visible ~ .default-input__hint-and-error, .default-input.default-input_rich .default-input__input:not(:placeholder-shown) ~ .default-input__hint-and-error {
+  margin: 16rem 0 0;
+}
+.default-input.default-input_rich .default-input__hint-and-error {
+  display: block;
+  margin: 3rem 0 0;
+}
+.default-input.default-input_rich .default-input__icon-and-name {
+  top: 25rem;
+  left: 23rem;
+  transform: none;
+  margin: 0 0 3rem;
+}
+.default-input.default-input_rich .default-input__icon {
+  display: none;
+}
+.default-input.default-input_rich .default-input__hint, .default-input.default-input_rich .note-error {
+  margin: 0;
+}
+
+.button {
+  font-family: "Roboto-Slab", sans-serif;
+  font-size: 14rem;
+  line-height: 132%;
+  text-transform: lowercase;
+  color: #f00;
+  background-color: transparent;
+  border: none;
+  padding: 4rem 10rem;
+  min-width: fit-content;
+  border-radius: 4rem;
+}
+@media screen and (min-width: 1280px) {
+  .button {
+    font-size: 1.09375vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button {
+    padding: 0.3125vw 0.78125vw;
+    border-radius: 0.3125vw;
+  }
+}
+.button:hover {
+  cursor: pointer;
+}
+@media (min-width: 769px) {
+  .button:hover {
+    color: #fff;
+    background-color: #f00;
+  }
+  .button:active {
+    color: #fff;
+    background-color: #000;
+  }
+}
+@media (max-width: 768px) {
+  .button:active, .button:focus {
+    color: #fff;
+    background-color: #f00;
+  }
+}
+
+.button.button_accent {
+  border: 1px solid #f00;
+}
+.button.button_accent:active {
+  border-color: #000;
+}
+
+.singup {
+  height: 100vh;
+  padding: 0 0 0 72rem;
+}
+@media screen and (max-width: 1023px) {
+  .singup {
+    padding: 0 0 0 35rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .singup {
+    padding: 0 35rem;
+    margin: 0 auto;
+    max-width: 540rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .singup {
+    padding: 0 15rem;
+  }
+}
+.singup__container {
+  height: 100%;
+}
+.singup__actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .singup__actions {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .singup__actions {
+    max-width: 512rem;
+  }
+}
+.singup__actions .button {
+  max-width: min-content;
+}
+.singup__form {
+  display: flex;
+  flex-direction: column;
+}
+.singup__form .button {
+  align-self: flex-end;
+  margin: 11rem 0 0;
+}
+.singup .default-input:not(:first-child) {
+  margin: 10rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .singup .default-input:not(:first-child) {
+    display: none;
+  }
+}
+.singup__info {
+  font-size: 14rem;
+  color: #9B9B9B;
+  line-height: 136%;
+}
+@media screen and (min-width: 1280px) {
+  .singup__info {
+    font-size: 1.09375vw;
+  }
+}
+.singup__info-highlight {
+  color: #f00;
+}
+.singup__illustration {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  right: 4%;
+}
+@media screen and (max-width: 1279px) {
+  .singup__illustration {
+    max-width: 56%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .singup__illustration {
+    display: none;
+  }
+}

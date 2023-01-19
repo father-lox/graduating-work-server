@@ -7,7 +7,7 @@ use App\Models\User;
 
 class UserRegistrationController extends Controller
 {
-    public function index(): string {
+    public function index() {
         return view('registration');
     }
 

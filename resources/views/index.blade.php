@@ -4,15 +4,11 @@
 <head>
     <title>News</title>
     @vite(['resources/css/index.css'])
+    @vite(['resources/css/header.css'])
 </head>
 
 <body>
-    <header class="header">
-        <nav class="navigation">
-            <a href="{{ route('login') }}" class="button navigation__login">login</a>
-            <a href="{{ route('registration') }}" class="button navigation__signup">sign up</a>
-        </nav>
-    </header>    
+    @include('components.header')
     <main class="index">
         <section class="news-section">
             <div class="news">

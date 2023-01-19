@@ -2,15 +2,19 @@
 <html>
 
 <head>
-    <title>News </title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Login</title>
+    @vite(['resources/css/login.css'])
+    @vite(['resources/css/header.css'])
 </head>
 
 <body>
+    @include('components.header')
     <main class="login">
-        <form class="login-form">
-            <div class="default-input default-input_rich"><input class="default-input__input" type="text" name="login"
-                    placeholder="">
+        <form action="{{ route('login-action') }}" method="post" class="login-form">
+            @csrf
+
+            <div class="default-input default-input_rich">
+                <input class="default-input__input" type="email" required name="email" placeholder="">
                 <div class="default-input__icon-and-name"><svg class="default-input__icon" viewBox="0 0 18 18"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -20,7 +24,7 @@
                             d="M8.98867 9.00443C10.8922 9.00443 12.4351 7.46086 12.4351 5.55728C12.4351 3.65371 10.8922 2.11086 8.98867 2.11086C7.0851 2.11086 5.54152 3.65371 5.54152 5.55728C5.5351 7.45443 7.06795 8.998 8.96438 9.00443H8.98867Z"
                             stroke="#FFA2A2" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-                    <p class="default-input__name">login</p>
+                    <p class="default-input__name">e-mail</p>
                 </div>
                 <div class="default-input__hint-and-error">
                     <div class="note-error"><svg class="note-error__image" viewBox="0 0 24 24" fill="none"
@@ -37,8 +41,8 @@
                     </div>
                 </div>
             </div>
-            <div class="default-input default-input_rich"><input class="default-input__input" type="password"
-                    name="pass" placeholder="">
+            <div class="default-input default-input_rich">
+                <input class="default-input__input" type="password" name="password" required placeholder="">
                 <div class="default-input__icon-and-name"><svg class="default-input__icon" viewBox="0 0 18 18"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -68,17 +72,21 @@
                 </div>
             </div>
             <div class="login-form__action-and-error">
-                <div class="note-error"><svg class="note-error__image" viewBox="0 0 24 24" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M4.81409 20.4368H19.1971C20.7791 20.4368 21.7721 18.7268 20.9861 17.3528L13.8001 4.78781C13.0091 3.40481 11.0151 3.40381 10.2231 4.78681L3.02509 17.3518C2.23909 18.7258 3.23109 20.4368 4.81409 20.4368Z"
-                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M12.0027 13.4148V10.3148" stroke-width="1.5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                        <path d="M11.995 16.5H12.005" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                    <p class="note-error__text">не верный логин или пароль</p>
-                </div><button class="button button_accent" type="submit">login</button>
+                @error("login")
+                    <div class="note-error">
+                        <svg class="note-error__image" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M4.81409 20.4368H19.1971C20.7791 20.4368 21.7721 18.7268 20.9861 17.3528L13.8001 4.78781C13.0091 3.40481 11.0151 3.40381 10.2231 4.78681L3.02509 17.3518C2.23909 18.7258 3.23109 20.4368 4.81409 20.4368Z"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M12.0027 13.4148V10.3148" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M11.995 16.5H12.005" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <p class="note-error__text">{{$message}}</p>
+                    </div>
+                @enderror
+                <button class="button button_accent" type="submit">login</button>
             </div>
         </form>
     </main>

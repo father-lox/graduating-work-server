@@ -1,0 +1,58 @@
+.header {
+    max-width: 600rem;
+    margin: 25rem auto 0;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navigation__side {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    font-family: "Roboto-Slab", sans-serif;
+    font-size: 14rem;
+    line-height: 132%;
+    text-transform: lowercase;
+    color: #f00;
+    background-color: transparent;
+    border: none;
+    padding: 4rem 10rem;
+    min-width: fit-content;
+    border-radius: 4rem;
+  }
+  @media screen and (min-width: 1280px) {
+    .button {
+      font-size: 1.09375vw;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .button {
+      padding: 0.3125vw 0.78125vw;
+      border-radius: 0.3125vw;
+    }
+  }
+  .button:hover {
+    cursor: pointer;
+  }
+  @media (min-width: 769px) {
+    .button:hover {
+      color: #fff;
+      background-color: #f00;
+    }
+    .button:active {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+  @media (max-width: 768px) {
+    .button:active, .button:focus {
+      color: #fff;
+      background-color: #f00;
+    }
+  }

@@ -362,14 +362,6 @@ body {
     height: 2.03125vw;
   }
 }
-
-.header {
-  max-width: 600rem;
-  display: flex;
-  justify-content: flex-end;
-  margin: 25rem auto 0;
-}
-
 .index {
   padding: 0 30rem;
 }

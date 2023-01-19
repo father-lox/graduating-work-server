@@ -4,9 +4,11 @@
 <head>
     <title>Your News</title>
     @vite(['resources/css/publications.css'])
+    @vite(['resources/css/header.css'])
 </head>
 
 <body>
+    @include('components.header')
     <main class="author-news">
         <section class="published-news">
             <h1 class="admin-page-title">List your news</h1>

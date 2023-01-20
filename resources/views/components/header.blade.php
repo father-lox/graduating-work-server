@@ -5,6 +5,7 @@
             </div>
             <div class="navigation__side">
                 @auth("web")
+                    <a href="{{ route('write') }}" class="button">write</a>
                     <a href="{{ route('publications') }}" class="button">publications</a>
                     <a href="{{ route('logout') }}" class="button">logout</a>
                 @endauth

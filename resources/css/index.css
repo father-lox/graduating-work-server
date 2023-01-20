@@ -329,7 +329,7 @@ body {
 }
 .news__controllers {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: 15rem 0 0;
 }
 @media screen and (min-width: 1280px) {
@@ -363,11 +363,13 @@ body {
   }
 }
 .index {
-  padding: 0 30rem;
+  /* padding: 0 30rem; */
+  max-width: 600rem; 
+  margin: 50rem auto 0;
 }
 .index .news-section {
   min-height: 100vh;
+  flex-direction: column;
+  gap: 50rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }

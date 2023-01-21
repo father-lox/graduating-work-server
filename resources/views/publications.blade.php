@@ -3,8 +3,8 @@
 
 <head>
     <title>Your News</title>
-    @vite(['resources/css/publications.css'])
     @vite(['resources/css/header.css'])
+    @vite(['resources/css/publications.css'])
 </head>
 
 <body>

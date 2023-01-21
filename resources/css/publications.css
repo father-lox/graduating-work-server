@@ -240,7 +240,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 860rem;
   margin: 0 auto;
   min-height: 100vh;
   padding: 0 20rem 100rem;
@@ -251,4 +250,13 @@ body {
 
 .published-news {
   max-width: 100%;
+}
+
+body {
+  max-width: 860rem;
+  margin: 0 auto;
+}
+
+.header {
+  max-width: none;
 }

@@ -7,6 +7,7 @@
     @vite(['resources/css/comments.css'])
     @vite(['resources/js/auto-size.js'])
     @vite(['resources/js/comments.js'])
+    @vite(['resources/css/pagination.css'])
 </head>
 
 <body>
@@ -31,6 +32,9 @@
                         <p class="comment__text">{{$comment->comment}}</p>
                     </div>
                 @endforeach
+            </div>
+            <div class="pagination">
+                {{ $comments->links() }}
             </div>
             <a href="{{ route('home') }}" class="back-to-news comment-section__back"><span class="back-to-news__lable">Back To
                     News</span><svg class="back-to-news__arrow display-more-767" width="30" height="184"

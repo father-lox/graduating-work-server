@@ -15,7 +15,7 @@ class CommentsController extends Controller
     }
 
     public function getComments($newsId) {
-        return Comment::where('post_id', $newsId)->orderBy('created_at', 'desc')->get();
+        return Comment::where('post_id', $newsId)->orderBy('created_at', 'desc')->paginate(10);
     }
 
     public function sendComment(Request $request, $newsId) {

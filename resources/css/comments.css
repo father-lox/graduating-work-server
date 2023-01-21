@@ -1,0 +1,637 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Regular.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Regular.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Medium.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Medium.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../../fonts/Noto_Sans/NotoSans-Bold.ttf") format("opentype"), url("../../fonts/Noto_Sans/NotoSans-Bold.woff") format("woff"), url("../../fonts/Noto_Sans/NotoSans-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Noto-Serif";
+  src: url("../../fonts/Noto_Serif/NotoSerif-Regular.ttf") format("opentype"), url("../../fonts/Noto_Serif/NotoSerif-Regular.woff") format("woff"), url("../../fonts/Noto_Serif/NotoSerif-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Noto-Serif";
+  src: url("../../fonts/Noto_Serif/NotoSerif-Medium.ttf") format("opentype"), url("../../fonts/Noto_Serif/NotoSerif-Medium.woff") format("woff"), url("../../fonts/Noto_Serif/NotoSerif-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+/* --------------------- */
+@font-face {
+  font-family: "Roboto-Slab";
+  src: url("../../fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format("opentype"), url("../../fonts/Roboto_Slab/RobotoSlab-Regular.woff") format("woff"), url("../../fonts/Roboto_Slab/RobotoSlab-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+/* --------------------- */
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+  background-color: #f00;
+}
+
+html {
+  font-size: 1px;
+}
+
+body {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 10rem;
+  line-height: 136%;
+  caret-color: #f00;
+}
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 0.78125vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .display-more-767 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .display-less-768 {
+    display: none;
+  }
+}
+
+.button {
+  font-family: "Roboto-Slab", sans-serif;
+  font-size: 14rem;
+  line-height: 132%;
+  text-transform: lowercase;
+  color: #f00;
+  background-color: transparent;
+  border: none;
+  padding: 4rem 10rem;
+  min-width: fit-content;
+  border-radius: 4rem;
+}
+@media screen and (min-width: 1280px) {
+  .button {
+    font-size: 1.09375vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .button {
+    padding: 0.3125vw 0.78125vw;
+    border-radius: 0.3125vw;
+  }
+}
+.button:hover {
+  cursor: pointer;
+}
+@media (min-width: 769px) {
+  .button:hover {
+    color: #fff;
+    background-color: #f00;
+  }
+  .button:active {
+    color: #fff;
+    background-color: #000;
+  }
+}
+@media (max-width: 768px) {
+  .button:active, .button:focus {
+    color: #fff;
+    background-color: #f00;
+  }
+}
+
+.news-statistics {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 16rem;
+  line-height: 136%;
+  font-weight: 500;
+  display: flex;
+  color: #3d3d3d;
+}
+@media screen and (min-width: 1280px) {
+  .news-statistics {
+    font-size: 1.25vw;
+  }
+}
+.news-statistics__item {
+  display: flex;
+  align-items: center;
+}
+.news-statistics__item:not(:last-child) {
+  margin: 0 17rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .news-statistics__item:not(:last-child) {
+    margin: 0 1.328125vw 0 0;
+  }
+}
+.news-statistics__preview-icon {
+  width: 24px;
+  stroke: #3d3d3d;
+  margin: 0 10rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .news-statistics__preview-icon {
+    width: 1.875vw;
+    margin: 0 0.78125vw 0 0;
+  }
+}
+
+.publisher-page-link {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background-color: #f00;
+  transition-property: width, height;
+  transition: 0.15s cubic-bezier(0.33, 1, 0.68, 1);
+}
+@media screen and (min-width: 1280px) {
+  .publisher-page-link {
+    width: 1.953125vw;
+    height: 1.953125vw;
+  }
+}
+.publisher-page-link:hover {
+  transform: scale(1.2);
+}
+
+.comment {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 14rem;
+  line-height: 136%;
+}
+@media screen and (min-width: 1280px) {
+  .comment {
+    font-size: 1.09375vw;
+  }
+}
+.comment__nickname {
+  color: #f00;
+}
+.comment__nickname_writer {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 16rem;
+  line-height: 136%;
+  font-weight: 500;
+}
+@media screen and (min-width: 1280px) {
+  .comment__nickname_writer {
+    font-size: 1.25vw;
+  }
+}
+.comment__text {
+  margin: 8rem 0 0;
+  color: #000;
+  font-size: inherit;
+}
+.comment__text_writer {
+  font-size: 16rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment__text_writer {
+    font-size: 1.25vw;
+  }
+}
+
+.news {
+  position: relative;
+  padding: 0 45rem 0 0;
+  max-width: 600rem;
+}
+@media screen and (min-width: 1280px) {
+  .news {
+    max-width: 46.875vw;
+    padding: 0 3.515625vw 0 0;
+  }
+}
+.news__title {
+  font-family: "Noto-Serif", sans-serif;
+  font-size: 36rem;
+  line-height: 136%;
+  font-weight: 500;
+}
+@media screen and (min-width: 1280px) {
+  .news__title {
+    font-size: 2.8125vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .news__title {
+    font-size: 26rem;
+  }
+}
+.news__author-comment-section {
+  margin: 25rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .news__author-comment-section {
+    margin: 1.953125vw 0 0;
+  }
+}
+.news__author-name {
+  color: #f00;
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 16rem;
+  line-height: 136%;
+  font-weight: 500;
+}
+@media screen and (min-width: 1280px) {
+  .news__author-name {
+    font-size: 1.25vw;
+  }
+}
+.news__author-comment {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 16rem;
+  line-height: 136%;
+  margin: 8rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .news__author-comment {
+    font-size: 1.25vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .news__author-comment {
+    margin: 0.625vw 0 0;
+  }
+}
+.news__controllers {
+  display: flex;
+  justify-content: space-between;
+  margin: 15rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .news__controllers {
+    margin: 1.171875vw 0 0;
+  }
+}
+.news__publisher-page-links {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  right: 0;
+}
+.news__publisher-page-links .publisher-page-link:not(:first-child) {
+  margin: 10rem 0 0;
+}
+@media screen and (min-width: 1280px) {
+  .news__publisher-page-links .publisher-page-link:not(:first-child) {
+    margin: 0.78125vw 0 0;
+  }
+}
+.news .button {
+  width: 144rem;
+  height: 26rem;
+}
+@media screen and (min-width: 1280px) {
+  .news .button {
+    width: 11.25vw;
+    height: 2.03125vw;
+  }
+}
+
+.comment {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 14rem;
+  line-height: 136%;
+}
+@media screen and (min-width: 1280px) {
+  .comment {
+    font-size: 1.09375vw;
+  }
+}
+.comment__nickname {
+  color: #f00;
+}
+.comment__nickname_writer {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 16rem;
+  line-height: 136%;
+  font-weight: 500;
+}
+@media screen and (min-width: 1280px) {
+  .comment__nickname_writer {
+    font-size: 1.25vw;
+  }
+}
+.comment__text {
+  margin: 8rem 0 0;
+  color: #000;
+  font-size: inherit;
+}
+.comment__text_writer {
+  font-size: 16rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment__text_writer {
+    font-size: 1.25vw;
+  }
+}
+
+.input-expressive {
+  font-family: "Noto-Serif", sans-serif;
+  font-size: 36rem;
+  line-height: 136%;
+  font-weight: 500;
+  border: none;
+  resize: none;
+  padding: 0;
+}
+@media screen and (min-width: 1280px) {
+  .input-expressive {
+    font-size: 2.8125vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .input-expressive {
+    font-size: 26rem;
+  }
+}
+.input-expressive:hover, .input-expressive:focus {
+  color: #ffa1a1;
+  outline: none;
+}
+.input-expressive:hover:not(:focus):not(:placeholder-shown) {
+  color: #f00;
+}
+.input-expressive:not(:placeholder-shown) {
+  color: #000;
+}
+
+.back-to-news {
+  background-color: #FBFBFB;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline-color: #f00;
+  color: #000;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  .back-to-news {
+    flex-direction: column;
+  }
+}
+.back-to-news:hover {
+  cursor: pointer;
+}
+.back-to-news:focus .back-to-news__lable {
+  color: #f00;
+}
+.back-to-news:hover, .back-to-news:focus {
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .back-to-news:hover .back-to-news__arrow, .back-to-news:focus .back-to-news__arrow {
+    transform: translateY(-30rem) scale(1.5);
+  }
+}
+@media screen and (min-width: 768px) {
+  .back-to-news:hover .back-to-news__arrow, .back-to-news:focus .back-to-news__arrow {
+    transform: translateY(-30rem);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .back-to-news:hover .back-to-news__arrow, .back-to-news:focus .back-to-news__arrow {
+    transform: translateY(-2.34375vw);
+  }
+}
+.back-to-news:active {
+  background-color: #f00;
+}
+@media screen and (min-width: 768px) {
+  .back-to-news:active .back-to-news__arrow {
+    fill: #fff;
+  }
+  .back-to-news:active .back-to-news__lable {
+    color: #fff;
+  }
+}
+@media screen and (max-width: 767px) {
+  .back-to-news:active .back-to-news__arrow {
+    fill: #000;
+  }
+  .back-to-news:active .back-to-news__lable {
+    color: #000;
+  }
+}
+.back-to-news__lable {
+  font-family: "Roboto-Slab", sans-serif;
+  font-size: 14rem;
+  line-height: 132%;
+  text-transform: lowercase;
+  text-align: left;
+}
+@media screen and (min-width: 1280px) {
+  .back-to-news__lable {
+    font-size: 1.09375vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .back-to-news__lable {
+    margin: 0 0 0 25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .back-to-news__lable {
+    transform: rotate(90deg);
+    margin: 78rem 0 0;
+    max-width: 35rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .back-to-news__lable {
+    margin: 6.09375vw 0 0;
+    max-width: 2.734375vw;
+  }
+}
+.back-to-news__arrow {
+  transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  fill: #f00;
+}
+@media screen and (max-width: 767px) {
+  .back-to-news__arrow {
+    margin: 0 25rem 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .back-to-news__arrow {
+    margin: 0 0 55rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .back-to-news__arrow {
+    margin: 0 0 4.296875vw;
+    width: 2.34375vw;
+    height: 14.375vw;
+  }
+}
+
+.comment-section {
+  max-width: 512rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment-section {
+    max-width: 40vw;
+    margin: 0 0 0 12.65625vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comment-section {
+    margin: 0 0 0 12.7%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .comment-section {
+    margin: 0 auto;
+    padding: 0 25rem;
+  }
+}
+.comment-section__back {
+  position: fixed;
+  right: 0;
+}
+@media screen and (max-width: 767px) {
+  .comment-section__back {
+    height: 40rem;
+    width: 100%;
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .comment-section__back {
+    height: 100vh;
+    width: 134rem;
+    top: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment-section__back {
+    width: 10.46875vw;
+  }
+}
+.comment-section__typing {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin: 0 0 30rem;
+}
+@media screen and (min-width: 1280px) {
+  .comment-section__typing {
+    margin: 0 0 2.34375vw;
+  }
+}
+.comment-section .input-expressive {
+  width: 100%;
+  max-height: 100%;
+  height: 49rem;
+  max-height: 200rem;
+  padding: 0 20rem 0 0;
+  margin: 0 0 40rem;
+}
+
+.comment-section__typing .button {
+  align-self: flex-end;
+}
+
+.comment-list {
+  gap: 30rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 30rem;
+}
+
+.admin-page-title {
+  font-family: "Noto-Sans", sans-serif;
+  font-size: 36rem;
+  line-height: 136%;
+  font-weight: 500;
+  color: #3d3d3d;
+}
+@media screen and (min-width: 1280px) {
+  .admin-page-title {
+    font-size: 2.8125vw;
+  }
+}
+
+.comment-section .admin-page-title {
+  margin: 150rem 0 50rem;
+}

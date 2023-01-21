@@ -27,7 +27,7 @@
                     @endif
                 </div>
                 <div class="news__controllers">
-                    <button class="button">Комментировать</button>
+                    <a href="{{ route('comments', ['newsId' => $post->id]) }}" class="button">Комментировать</a>
                 </div>
             </div>
             @endforeach

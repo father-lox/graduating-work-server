@@ -8,11 +8,10 @@
 </head>
 
 <body>
-    @include('components.header')
     <main class="singup">
         <section class="singup__container">
             <div class="singup__actions">
-                <!-- <a class="button" href="{{ route('home') }}">Home</a> -->
+                @include('components.header')
                 <form class="singup__form" action="{{ route('registration-action') }}" method="post">
                     @csrf
 
@@ -93,7 +92,6 @@
                             <p class="default-input__name">Confirm password</p>
                         </div>
                         <div class="default-input__hint-and-error">
-                            <!-- <p class="default-input__hint">It is used to authorize</p> -->
                             @error('password_confirmation')
                                 <div class="note-error"><svg class="note-error__image" viewBox="0 0 24 24"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,9 +110,6 @@
                     </div>
                     <button class="button button_accent" type="submit">Sign Up</button>
                 </form>
-                <p class="singup__info"><span class="singup__info-highlight">Заявка на авторство</span>: мы в активном
-                    поиске талантливых авторов. Заплни поля формы и отправте ее. После расмотрения заявки мы свяжемся с
-                    табой.</p>
             </div>
             <picture>
                 <!-- <source media="(max-width: 1024px)" srcset="./img/man-mobile.png" alt="Old Phone"> -->

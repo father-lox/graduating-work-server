@@ -412,9 +412,9 @@ body {
     max-width: 512rem;
   }
 }
-.singup__actions .button {
+/* .singup__actions .button {
   max-width: min-content;
-}
+} */
 .singup__form {
   display: flex;
   flex-direction: column;
@@ -460,4 +460,10 @@ body {
   .singup__illustration {
     display: none;
   }
+}
+
+.singup .header {
+  margin: 0;
+  padding: 0;
+
 }

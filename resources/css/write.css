@@ -1,0 +1,59 @@
+
+.input-expressive {
+    font-family: "Noto-Serif", sans-serif;
+    font-size: 36rem;
+    line-height: 136%;
+    font-weight: 500;
+    border: none;
+    resize: none;
+    padding: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    .input-expressive {
+      font-size: 2.8125vw;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .input-expressive {
+      font-size: 26rem;
+    }
+  }
+  .input-expressive:hover, .input-expressive:focus {
+    color: #ffa1a1;
+    outline: none;
+  }
+  .input-expressive:hover:not(:focus):not(:placeholder-shown) {
+    color: #f00;
+  }
+  .input-expressive:not(:placeholder-shown) {
+    color: #000;
+  }
+
+.write {
+    max-width: 600rem;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.create-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.create-post .input-expressive {
+    max-height: 200rem;
+    margin: 0 0 30rem;
+}
+
+.create-post .default-input__input {
+    resize: none;
+    min-height: 40rem;
+    max-height: 100rem;
+}
+
+.create-post .button {
+    align-self: flex-end;
+    margin: 30rem 0 0;
+}

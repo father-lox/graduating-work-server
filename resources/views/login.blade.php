@@ -15,15 +15,11 @@
 
             <div class="default-input default-input_rich">
                 <input class="default-input__input" type="email" required name="email" placeholder="">
-                <div class="default-input__icon-and-name"><svg class="default-input__icon" viewBox="0 0 18 18"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M8.9887 11.5096C6.08798 11.5096 3.61084 11.9482 3.61084 13.7046C3.61084 15.4611 6.07227 15.9154 8.9887 15.9154C11.8894 15.9154 14.3658 15.4761 14.3658 13.7204C14.3658 11.9646 11.9051 11.5096 8.9887 11.5096Z"
-                            stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M8.98867 9.00443C10.8922 9.00443 12.4351 7.46086 12.4351 5.55728C12.4351 3.65371 10.8922 2.11086 8.98867 2.11086C7.0851 2.11086 5.54152 3.65371 5.54152 5.55728C5.5351 7.45443 7.06795 8.998 8.96438 9.00443H8.98867Z"
-                            stroke="#FFA2A2" stroke-width="1.42857" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                <div class="default-input__icon-and-name">
+                    <svg class="default-input__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.9026 8.85114L13.4593 12.4642C12.6198 13.1302 11.4387 13.1302 10.5992 12.4642L6.11841 8.85114" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9089 21C19.9502 21.0084 22 18.5095 22 15.4384V8.57001C22 5.49883 19.9502 3 16.9089 3H7.09114C4.04979 3 2 5.49883 2 8.57001V15.4384C2 18.5095 4.04979 21.0084 7.09114 21H16.9089Z" stroke="#FFA2A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
                     <p class="default-input__name">e-mail</p>
                 </div>
                 <div class="default-input__hint-and-error">
@@ -72,8 +68,8 @@
                 </div>
             </div>
             <div class="login-form__action-and-error">
-                @error("login")
-                    <div class="note-error">
+                <div class="note-error">
+                    @error("login")
                         <svg class="note-error__image" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -84,8 +80,8 @@
                             <path d="M11.995 16.5H12.005" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         <p class="note-error__text">{{$message}}</p>
-                    </div>
-                @enderror
+                    @enderror
+                </div>
                 <button class="button button_accent" type="submit">login</button>
             </div>
         </form>

@@ -3,8 +3,9 @@
 
 <head>
     <title>News</title>
-    @vite(['resources/css/index.css'])
     @vite(['resources/css/header.css'])
+    @vite(['resources/css/index.css'])
+    @vite(['resources/css/pagination.css'])
 </head>
 
 <body>
@@ -32,6 +33,9 @@
             </div>
             @endforeach
         </section>
+        <div class="pagination">
+            {{$posts->links()}}
+        </div>
     </main>
     <script src="./script.js"> </script>
 </body>

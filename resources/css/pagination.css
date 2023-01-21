@@ -1,0 +1,25 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+    font-size: 15rem;
+    margin: 40rem 0;
+}
+
+.pagination .active {
+    color: red;
+}
+
+.pagination li a {
+    color: black;
+}
+
+.pagination li:not(:first-child):hover,
+.pagination li:not(:last-child):hover {
+    font-size: 20rem;
+}
+
+.pagination li:first-child:not(.disabled) a:hover,
+.pagination li:last-child:not(.disabled) a:hover {
+    color: red;
+}

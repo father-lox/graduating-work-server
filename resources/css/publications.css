@@ -215,9 +215,9 @@ body {
   }
 }
 @media screen and (max-width: 575px) {
-  .published-news-list__title {
+  /* .published-news-list__title {
     font-size: 10rem;
-  }
+  } */
 }
 .published-news-list__comment {
   margin: 0 0 13rem;

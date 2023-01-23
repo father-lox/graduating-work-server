@@ -369,11 +369,23 @@ body {
   align-items: center;
 }
 
-.login-form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+@media screen and (min-width: 580px) {
+  .login-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }  
 }
+
+@media screen and (max-width: 579px) {
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30rem;
+    width: 100%;
+  }  
+}
+
 .login-form__fields, .login-form__action-and-error {
   display: flex;
 }
@@ -395,4 +407,10 @@ body {
 }
 .login-form .error-note {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 30rem;
+  }
 }

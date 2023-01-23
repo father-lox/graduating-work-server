@@ -17,7 +17,7 @@
             @csrf
 
             <textarea id="comment-field" class="input-expressive" required name="title" maxlength="78" rows="1"
-                        placeholder="Enter your comment"></textarea>
+                        placeholder="Enter your comment (78)"></textarea>
             <div class="default-input">
                 <textarea class="default-input__input" maxlength="128" type="text" name="author_comment" placeholder=""></textarea>
                 <div class="default-input__icon-and-name">
@@ -27,7 +27,7 @@
                         <path d="M11.0208 6.00092L16.473 10.188" stroke="#FFA2A2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         
-                    <p class="default-input__name">your comment</p>
+                    <p class="default-input__name">your comment (128)</p>
                 </div>
                 <div class="default-input__hint-and-error">
                     <div class="note-error"><svg class="note-error__image" viewBox="0 0 24 24" fill="none"
